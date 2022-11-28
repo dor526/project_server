@@ -1,3 +1,4 @@
+package db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -21,7 +22,7 @@ public class DB_Connection {
         
         try 
         {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/projectdb?serverTimezone=IST","root","Dorfilis23!");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/project?serverTimezone=IST","root","Kfir10T$");
             System.out.println("SQL connection succeed");
            
      	} catch (SQLException ex) 

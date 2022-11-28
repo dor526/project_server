@@ -1,9 +1,12 @@
+package server;
 
 import java.io.*;
 import java.util.ArrayList;
+
+import db.DB_Connection;
 import ocsf.server.*;
 
-public class project_server extends AbstractServer {
+public class EchoServer extends AbstractServer {
 	//Class variables *************************************************
 	  
 	  /**
@@ -18,7 +21,7 @@ public class project_server extends AbstractServer {
 	   *
 	   * @param port The port number to connect on.
 	   */
-	  public project_server(int port) 
+	  public EchoServer(int port) 
 	  {
 	    super(port);
 	  }
@@ -46,9 +49,9 @@ public class project_server extends AbstractServer {
 	   */
 	  protected void serverStarted()
 	  {
-		  DB_Connection.connectDB();
-	    System.out.println
-	      ("Server listening for connections on port " + getPort());
+		 DB_Connection.connectDB();
+	     System.out.println
+	     ("Server listening for connections on port " + getPort());
 	  }
 	  
 	  /**
@@ -83,7 +86,7 @@ public class project_server extends AbstractServer {
 	      port = DEFAULT_PORT; //Set port to 5555
 	    }
 		
-	    project_server sv = new project_server(port);
+	    EchoServer sv = new EchoServer(port);
 	    
 	    try 
 	    {
